@@ -102,8 +102,7 @@ while cap.isOpened():
             # Check if the person's center is within the crosswalk
             person_center_x = (x1 + x2) // 2
             text_font_size = 50  # Adjust the font size for better visibility
-
-            # Display "인도에 머무르세요!" only if the person is outside the crosswalk and signal is RED
+            
             if left_line[1] < person_center_x < right_line[1]:
                 if signal == "GREEN":
                     frame = draw_text_korean(frame, "건너세요!", (x1, y1 - 50), font_size=text_font_size, color=(0, 255, 0))
